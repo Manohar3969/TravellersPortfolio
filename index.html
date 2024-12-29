@@ -7,6 +7,7 @@
     <title>Traveler's Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 </head>
 <body>
     <!-- Header Section -->
@@ -29,12 +30,13 @@
             <div class="hero-content">
                 <h2>Exploring the World, One Adventure at a Time</h2>
                 <p>Join me on my journey to discover new cultures, food, and landscapes!</p>
+                <a href="#about" class="cta-link">Learn More About Me</a> <!-- CTA link to About Section -->
             </div>
         </div>
     </header>
 
     <!-- About Me Section -->
-<section id="about">
+<section id="about" data-aos="fade-up">
   <div class="about-container">
       <div class="about-text">
           <h2>About Me</h2>
@@ -47,16 +49,18 @@
       </div>
       <div>
         <a href="#contact" class="cta-button">Get in Touch</a>
+        <a href="https://www.instagram.com/myprofile" class="cta-link" target="_blank">Follow me on Instagram</a> <!-- CTA link to social media -->
       </div>
   </div>
 </section>
 
 <!-- My Travel Section -->
-<section id="my-travel">
+<section id="my-travel" data-aos="slide-right">
   <div class="travel-container">
       <h2>My Travel Adventures</h2>
       <p>Explore some of my most memorable travel experiences. From tropical beaches to snow-capped mountains, here's a glimpse into the beautiful destinations I've visited!</p>
-      
+      <a href="#gallery" class="cta-link">Check out My Gallery</a> <!-- CTA link to Gallery Section -->
+
       <div class="travel-cards">
           <!-- Travel Card 1 -->
           <div class="travel-card">
@@ -126,11 +130,12 @@
 
 <!-- Gallery Section -->
 <!-- Gallery Section -->
-<section id="gallery">
+<section id="gallery" data-aos="zoom-in-up">
   <div class="gallery-container">
       <h2>My Travel Gallery</h2>
       <p>Take a peek into some of my most memorable moments from my travels around the world. From the bustling streets of cities to the tranquility of nature, here are some pictures from my adventures!</p>
-      
+      <a href="https://www.mytravelblog.com/gallery" class="cta-link" target="_blank">Explore More Photos</a> <!-- CTA link to external gallery or blog -->
+
       <div class="gallery-grid">
           <!-- Gallery Image 1 -->
           <div class="gallery-item">
@@ -184,10 +189,11 @@
 </section>
 
 <!-- Contact Section -->
-<section id="contact">
+<section id="contact" data-aos="slide-left">
   <div class="contact-container">
       <h2>Contact Me</h2>
       <p>Feel free to get in touch with me! Whether you have travel questions, partnership inquiries, or just want to say hello, I'm always happy to connect!</p>
+      <a href="mailto:example@traveler.com" class="cta-link">Email Me</a> <!-- CTA link for email -->
       
       <!-- Contact Form -->
       <form action="#" method="POST" class="contact-form">
@@ -218,6 +224,12 @@
   </div>
 </section>
 
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1000, // Duration of animations
+        easing: 'ease-in-out', // Easing function for the animations
+    });
+</script>
 </body>
 </html>

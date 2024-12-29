@@ -1,3 +1,12 @@
+/* Color Palette */
+:root {
+  --primary-blue: #4A90E2;
+  --light-gray: #f4f4f4;
+  --soft-green: #A8D08D;
+  --light-yellow: #FFF9C4;
+  --coral: #FF8A65;
+}
+
 /* Reset some default styles */
 * {
   margin: 0;
@@ -34,21 +43,24 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #4A90E2; /* Solid Blue */
+  background-color: var(--primary-blue); /* Vibrant Blue */
   padding: 100px 20px;
   text-align: center;
 }
 
 #header h1 {
   font-family: 'Poppins', sans-serif;
-  font-size: 3.5rem;
-  margin-bottom: 10px;
+  font-size: 4rem;
+  font-weight: 700; /* Bold Heading */
+  letter-spacing: 1px; /* Adds space between letters for a refined look */
+  margin-bottom: 15px;
 }
 
 #header p {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   margin-top: 10px;
   font-weight: 300;
+  line-height: 1.7;
 }
 
 .nav-container {
@@ -161,17 +173,19 @@ nav ul li a:hover {
 #about {
   padding: 80px 20px;
   text-align: center;
-  background-color: #f4f4f4; /* Light Gray */
+  background-color: var(--light-gray); /* Soft Gray */
   padding: 80px 20px;
   color: #333;
 }
 
 #about h2 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-family: 'Poppins', sans-serif; /* Font for header */
   margin-bottom: 20px;
   color: #007BFF;
   animation: fadeIn 1s ease-out;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 #about p {
@@ -183,21 +197,35 @@ nav ul li a:hover {
 }
 
 #about .cta-button {
-  font-size: 1.1rem;
-  padding: 15px 25px;
+  font-size: 1.2rem;
+  padding: 15px 30px;
   color: white;
   border: none;
-  border-radius: 25px;
+  border-radius: 30px;
   cursor: pointer;
   transition: all 0.3s ease;
   animation: fadeIn 2s ease-out;
   text-decoration: none;
-  background-color: #FF6347; /* Accent color */
+  background-color: var(--primary-blue);
   transition: background-color 0.3s ease;
+  font-weight: 500;
+  display: inline-block;
 }
 
 #about .cta-button:hover {
   background-color: #FF4500; /* Darker shade for hover effect */
+  transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+/* Link Hover Effect */
+.cta-link {
+  color: var(--primary-blue); /* Primary Blue Link Color */
+  font-weight: bold;
+}
+
+.cta-link:hover {
+  color: var(--coral); /* Accent Color on Hover */
+  text-decoration: underline;
 }
 
 #about img {
@@ -346,20 +374,23 @@ nav ul li a:hover {
   color: white;
   padding: 80px 20px;
   text-align: center;
-  background-color: #A8D08D; /* Soft Green */
+  background-color: var(--soft-green); /* Vibrant Green */
 }
 
 #my-travel h2 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-family: 'Poppins', sans-serif; /* Heading font */
   margin-bottom: 20px;
   animation: fadeInUp 1s ease-out;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 #my-travel p {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   margin-bottom: 40px;
-  line-height: 1.6;
+  line-height: 1.8;
+  font-weight: 400;
   animation: fadeInUp 1.2s ease-out;
 }
 
@@ -467,13 +498,14 @@ nav ul li a:hover {
   padding: 80px 20px;
   text-align: center;
   color: #333; /* Default text color */
-  background-color: #FFF9C4;
+  background-color: var(--light-yellow); /* Light Yellow */
 }
 
 #gallery h2 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-family: 'Poppins', sans-serif;
   margin-bottom: 20px;
+  font-weight: 600;
   animation: fadeInUp 1s ease-out;
 }
 
@@ -591,13 +623,15 @@ nav ul li a:hover {
 #contact {
   padding: 50px 20px;
   text-align: center;
-  background-color: #FF8A65;
+  background-color: var(--coral); /* Soft Coral */
 }
 
 #contact h2 {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   margin-bottom: 20px;
+  font-weight: 600;
   color: white;
+  font-family: 'Poppins', sans-serif;
 }
 
 #contact p {
