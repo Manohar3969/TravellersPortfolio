@@ -34,7 +34,7 @@ section {
 /* Header Styles */
 header {
   position: relative;
-  background-image: url('midground.jpg');
+  background-image: url('bg1.jpg');
   background-size: cover;
   background-position: center;
   color: white;
@@ -816,4 +816,52 @@ nav ul li a:hover {
   transform: scale(1); /* Back to normal size */
   opacity: 1;
   visibility: visible;
+}
+
+/* Below contains code for Footer */
+
+/* Footer Section */
+#footer {
+  background-color: #1a1a1a;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+  z-index: 1;
+}
+
+#footer .footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#footer p {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #bfbfbf;
+}
+
+#footer .social-icons {
+  margin: 20px 0;
+}
+
+#footer .social-icons a {
+  margin: 0 10px;
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+#footer .social-icons a:hover {
+  color: #0078ff; /* Highlight color on hover */
+  transform: scale(1.2); /* Slightly enlarge the icon */
+}
+
+/* Copyright Text */
+#footer p:last-child {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 20px;
 }
