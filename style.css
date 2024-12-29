@@ -323,88 +323,123 @@ nav ul li a:hover {
 /* This section has the code for My Travels Section */
 
 /* My Travels Section */
-#my-travels {
-  background-color: #f9f9f9;
-  padding: 50px 20px;
+/* My Travel Section */
+#my-travel {
+  background: linear-gradient(135deg, #FF7F50, #FF6347); /* Vibrant background */
+  color: white;
+  padding: 80px 20px;
   text-align: center;
 }
 
-#my-travels h2 {
-  font-size: 2.5rem;
+#my-travel h2 {
+  font-size: 3rem;
+  font-family: 'Poppins', sans-serif; /* Heading font */
   margin-bottom: 20px;
-  color: #333;
+  animation: fadeInUp 1s ease-out;
 }
 
-#my-travels p {
+#my-travel p {
   font-size: 1.1rem;
   margin-bottom: 40px;
-  color: #666;
+  line-height: 1.6;
+  animation: fadeInUp 1.2s ease-out;
 }
 
-/* Travel Grid */
-.travel-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+.travel-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
   gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
+  animation: fadeInUp 1.5s ease-out;
 }
 
-.travel-item {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
+.travel-card {
+  width: 280px;
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  text-align: left;
+  transform: translateY(20px);
+  opacity: 0;
+  animation: slideUp 1s ease-out forwards;
+  transition: transform 0.3s ease;
 }
 
-.travel-item img {
+.travel-card img {
   width: 100%;
   height: 200px;
   object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 15px;
 }
 
-.travel-item h3 {
-  font-size: 1.8rem;
-  color: #333;
+.travel-card .card-content {
+  padding: 20px;
+  text-align: left;
+}
+
+.travel-card .card-content h3 {
+  font-size: 1.6rem;
+  color: #FF6347; /* Accent color */
   margin-bottom: 10px;
 }
 
-.travel-item p {
+.travel-card .card-content p {
   font-size: 1rem;
-  color: #666;
+  color: #333;
 }
 
-/* Responsive Design for My Travels Section */
+/* Animation Keyframes */
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+      opacity: 0;
+      transform: translateY(50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Responsive Design for My Travel Section */
 @media (max-width: 768px) {
-  #my-travels h2 {
-      font-size: 2rem;
+  #my-travel h2 {
+      font-size: 2.5rem;
   }
 
-  .travel-item h3 {
-      font-size: 1.5rem;
+  #my-travel p {
+      font-size: 1rem;
   }
 
-  .travel-item p {
-      font-size: 0.9rem;
+  .travel-cards {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .travel-card {
+      width: 90%;
   }
 }
 
 @media (max-width: 480px) {
-  #my-travels h2 {
-      font-size: 1.5rem;
+  #my-travel h2 {
+      font-size: 2rem;
   }
 
-  .travel-item h3 {
-      font-size: 1.3rem;
-  }
-
-  .travel-item p {
-      font-size: 0.9rem;
+  .travel-card {
+      width: 100%;
   }
 }
+
 
 
 /* Below CSS Contains the code for Gallery Section */
