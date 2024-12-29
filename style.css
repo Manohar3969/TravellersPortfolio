@@ -12,6 +12,7 @@
   --link-color: #0078ff;
   --footer-background: #f1f1f1;
   --footer-text-color: #333;
+  --darkThemeColor: white;
 }
 
 /* Dark mode colors */
@@ -23,6 +24,7 @@
   --link-color: #66aaff;
   --footer-background: #1a1a1a;
   --footer-text-color: #bfbfbf;
+  --darkThemeColor: rgba(255, 136, 0, 0.884);
 }
 
 /* Reset some default styles */
@@ -239,7 +241,7 @@ nav ul li a:hover {
 
 #about .cta-button:hover {
   background-color: #FF4500; /* Darker shade for hover effect */
-  transform: scale(1.1); /* Slightly enlarge the button on hover */
+  transform: scale(1.05); /* Slightly enlarge the button on hover */
 }
 
 /* Link Hover Effect */
@@ -893,7 +895,7 @@ nav ul li a:hover {
   bottom: 80px;
   right: 20px;
   background-color: var(--button-background);
-  color: white;
+  color: var(--darkThemeColor);
   border: none;
   border-radius: 50%;
   width: 50px;
