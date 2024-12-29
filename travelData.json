@@ -1,0 +1,22 @@
+[
+    {
+        "image": "images/paris.jpg",
+        "title": "Paris, France",
+        "description": "The city of light and love!"
+    },
+    {
+        "image": "images/tokyo.jpg",
+        "title": "Tokyo, Japan",
+        "description": "Modern meets tradition."
+    },
+    {
+        "image": "images/nyc.jpg",
+        "title": "New York, USA",
+        "description": "The city that never sleeps."
+    },
+    {
+        "image": "images/capetown.jpg",
+        "title": "Cape Town, South Africa",
+        "description": "A stunning blend of nature and culture."
+    }
+]
