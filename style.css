@@ -5,6 +5,24 @@
   --soft-green: #A8D08D;
   --light-yellow: #FFF9C4;
   --coral: #FF8A65;
+  --background-color: #ffffff;
+  --text-color: #333333;
+  --button-background: #0078ff;
+  --button-hover: #005bb5;
+  --link-color: #0078ff;
+  --footer-background: #f1f1f1;
+  --footer-text-color: #333;
+}
+
+/* Dark mode colors */
+[data-theme="dark"] {
+  --background-color: #121212;
+  --text-color: #eaeaea;
+  --button-background: #1f1f1f;
+  --button-hover: #333333;
+  --link-color: #66aaff;
+  --footer-background: #1a1a1a;
+  --footer-text-color: #bfbfbf;
 }
 
 /* Reset some default styles */
@@ -20,8 +38,8 @@
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
-  background-color: #ffffff;
-  color: #333;
+  background-color: var(--background-color);
+  color: var(--text-color);
   height: 100%;
 }
 
@@ -29,6 +47,7 @@ body {
 section {
   width: 100%;
   min-height: 100vh; /* Ensure each section takes up at least the full viewport height */
+  overflow: hidden;
 }
 
 /* Header Styles */
@@ -864,4 +883,31 @@ nav ul li a:hover {
   font-size: 0.9rem;
   color: #666;
   margin-top: 20px;
+}
+
+/* Code added for Dark or Light Mode change button*/
+
+/* Floating Button Styles */
+.mode-toggle {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background-color: var(--button-background);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  font-size: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.mode-toggle:hover {
+  background-color: var(--button-hover);
+}
+
+.mode-toggle:focus {
+  outline: none;
 }
