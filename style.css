@@ -3,13 +3,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
 /* Body and General Styles */
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  background-color: #f4f4f4;
+  background-color: #fafafa;
   color: #333;
   height: 100%;
   margin: 0;
@@ -143,9 +144,51 @@ nav ul li a:hover {
 
 /* About Me Section */
 #about {
-  background-color: #ffffff;
-  padding: 50px 20px;
+  background: white; /* Gradient background */
+  padding: 80px 20px;
   text-align: center;
+}
+
+#about h2 {
+  font-size: 3rem;
+  font-family: 'Poppins', sans-serif; /* Font for header */
+  margin-bottom: 20px;
+  color: #007BFF;
+  animation: fadeIn 1s ease-out;
+}
+
+#about p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  color: #000;
+  animation: fadeIn 1.5s ease-out;
+}
+
+#about .cta-button {
+  font-size: 1.1rem;
+  padding: 15px 25px;
+  background-color: #f5a623; /* Accent button color */
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: fadeIn 2s ease-out;
+}
+
+#about .cta-button:hover {
+  background-color: #d88c13; /* Darker shade for hover effect */
+}
+
+#about img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  margin-top: 20px;
+  object-fit: cover;
+  border: 5px solid #fff;
+  animation: zoomIn 1s ease-out;
 }
 
 .about-container {
@@ -193,6 +236,19 @@ nav ul li a:hover {
 
 /* Responsive Design for About Me Section */
 @media (max-width: 768px) {
+  #about h2 {
+    font-size: 2.5rem;
+}
+
+#about p {
+    font-size: 1rem;
+}
+
+#about img {
+    width: 200px;
+    height: 200px;
+}
+
   .about-container {
       flex-direction: column;
       align-items: center;
@@ -216,6 +272,19 @@ nav ul li a:hover {
 }
 
 @media (max-width: 480px) {
+  #about h2 {
+    font-size: 2rem;
+}
+
+#about p {
+    font-size: 0.9rem;
+}
+
+#about img {
+    width: 180px;
+    height: 180px;
+}
+
   .about-text h2 {
       font-size: 1.5rem;
   }
@@ -226,6 +295,27 @@ nav ul li a:hover {
 
   .about-photo img {
       max-width: 100%;
+  }
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+      transform: scale(0.8);
+      opacity: 0;
+  }
+  to {
+      transform: scale(1);
+      opacity: 1;
   }
 }
 
