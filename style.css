@@ -446,37 +446,44 @@ nav ul li a:hover {
 
 /* Gallery Section */
 #gallery {
-  background-color: #ffffff;
-  padding: 50px 20px;
+  background-color: #f0f0f0; /* Light background for contrast */
+  padding: 80px 20px;
   text-align: center;
+  color: #333; /* Default text color */
 }
 
 #gallery h2 {
-  font-size: 2.5rem;
+  font-size: 3rem;
+  font-family: 'Poppins', sans-serif;
   margin-bottom: 20px;
-  color: #333;
+  animation: fadeInUp 1s ease-out;
 }
 
 #gallery p {
   font-size: 1.1rem;
   margin-bottom: 40px;
-  color: #666;
+  line-height: 1.6;
+  animation: fadeInUp 1.2s ease-out;
 }
 
-/* Gallery Grid */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+  grid-template-columns: repeat(6, 1fr); /* 3 columns */
   gap: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+  justify-items: center;
+  animation: fadeInUp 1.5s ease-out;
 }
 
 .gallery-item {
   position: relative;
+  width: 100%;
+  max-width: 300px;
   overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(20px);
+  opacity: 0;
+  animation: slideUp 1s ease-out forwards;
 }
 
 .gallery-item img {
@@ -484,42 +491,80 @@ nav ul li a:hover {
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
-  border-radius: 10px;
 }
 
-/* Hover effect for images */
-.gallery-item img:hover {
-  transform: scale(1.1);
+.gallery-item:hover img {
+  transform: scale(1.1); /* Zoom-in effect on hover */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 1.2rem;
+}
+
+.gallery-item:hover .overlay {
+  opacity: 1; /* Show overlay text on hover */
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+      opacity: 0;
+      transform: translateY(50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
 }
 
 /* Responsive Design for Gallery Section */
 @media (max-width: 768px) {
   #gallery h2 {
-      font-size: 2rem;
+      font-size: 2.5rem;
   }
 
-  .gallery-item img {
-      height: 200px;
+  #gallery p {
+      font-size: 1rem;
   }
 
-  .gallery-item h3 {
-      font-size: 1.5rem;
-  }
-
-  .gallery-item p {
-      font-size: 0.9rem;
+  .gallery-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
   }
 }
 
 @media (max-width: 480px) {
   #gallery h2 {
-      font-size: 1.5rem;
+      font-size: 2rem;
   }
 
-  .gallery-item img {
-      height: 150px;
+  .gallery-grid {
+      grid-template-columns: 1fr; /* 1 column for mobiles */
   }
 }
+
 
 
 /* Below Code contains the Contact Section */
