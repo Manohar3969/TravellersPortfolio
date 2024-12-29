@@ -424,13 +424,15 @@ nav ul li a:hover {
   transform: translateY(20px);
   opacity: 0;
   animation: slideUp 1s ease-out forwards;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .travel-card img {
   width: 100%;
   height: 200px;
   object-fit: cover;
+  transition: transform 0.5s ease;
+  animation: float 5s infinite ease-in-out;
 }
 
 .travel-card .card-content {
@@ -447,6 +449,16 @@ nav ul li a:hover {
 .travel-card .card-content p {
   font-size: 1rem;
   color: #333;
+}
+
+/* Hover Effects */
+.travel-card:hover {
+  transform: translateY(-10px); /* Slight lift */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+}
+
+.travel-card:hover img {
+  transform: scale(1.1); /* Zoom effect on image */
 }
 
 /* Animation Keyframes */
@@ -469,6 +481,16 @@ nav ul li a:hover {
   to {
       opacity: 1;
       transform: translateY(0);
+  }
+}
+
+/* Floating Keyframes */
+@keyframes float {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
   }
 }
 
@@ -753,4 +775,45 @@ nav ul li a:hover {
   .contact-form button.submit-btn {
       font-size: 1rem;
   }
+}
+
+/* Scroll-to-Top Button Styles */
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #FF6347; /* Button color */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  opacity: 0; /* Initially hidden */
+  visibility: hidden; /* Initially hidden */
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Show Button */
+.scroll-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Hover Effect */
+.scroll-to-top:hover {
+  background-color: #FF4500; /* Darker shade */
+}
+
+.scroll-to-top {
+  transform: scale(0.8); /* Slightly smaller initially */
+  transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.scroll-to-top.show {
+  transform: scale(1); /* Back to normal size */
+  opacity: 1;
+  visibility: visible;
 }
