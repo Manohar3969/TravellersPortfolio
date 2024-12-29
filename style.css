@@ -8,9 +8,9 @@
 
 /* Body and General Styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   line-height: 1.6;
-  background-color: #fafafa;
+  background-color: #ffffff;
   color: #333;
   height: 100%;
   margin: 0;
@@ -34,6 +34,21 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #4A90E2; /* Solid Blue */
+  padding: 100px 20px;
+  text-align: center;
+}
+
+#header h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+}
+
+#header p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  font-weight: 300;
 }
 
 .nav-container {
@@ -144,9 +159,11 @@ nav ul li a:hover {
 
 /* About Me Section */
 #about {
-  background: white; /* Gradient background */
   padding: 80px 20px;
   text-align: center;
+  background-color: #f4f4f4; /* Light Gray */
+  padding: 80px 20px;
+  color: #333;
 }
 
 #about h2 {
@@ -159,7 +176,7 @@ nav ul li a:hover {
 
 #about p {
   font-size: 1.1rem;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   line-height: 1.6;
   color: #000;
   animation: fadeIn 1.5s ease-out;
@@ -168,17 +185,19 @@ nav ul li a:hover {
 #about .cta-button {
   font-size: 1.1rem;
   padding: 15px 25px;
-  background-color: #f5a623; /* Accent button color */
   color: white;
   border: none;
   border-radius: 25px;
   cursor: pointer;
   transition: all 0.3s ease;
   animation: fadeIn 2s ease-out;
+  text-decoration: none;
+  background-color: #FF6347; /* Accent color */
+  transition: background-color 0.3s ease;
 }
 
 #about .cta-button:hover {
-  background-color: #d88c13; /* Darker shade for hover effect */
+  background-color: #FF4500; /* Darker shade for hover effect */
 }
 
 #about img {
@@ -322,13 +341,12 @@ nav ul li a:hover {
 
 /* This section has the code for My Travels Section */
 
-/* My Travels Section */
 /* My Travel Section */
 #my-travel {
-  background: linear-gradient(135deg, #FF7F50, #FF6347); /* Vibrant background */
   color: white;
   padding: 80px 20px;
   text-align: center;
+  background-color: #A8D08D; /* Soft Green */
 }
 
 #my-travel h2 {
@@ -446,10 +464,10 @@ nav ul li a:hover {
 
 /* Gallery Section */
 #gallery {
-  background-color: #f0f0f0; /* Light background for contrast */
   padding: 80px 20px;
   text-align: center;
   color: #333; /* Default text color */
+  background-color: #FFF9C4;
 }
 
 #gallery h2 {
@@ -571,21 +589,21 @@ nav ul li a:hover {
 
 /* Contact Section */
 #contact {
-  background-color: #f2f2f2;
   padding: 50px 20px;
   text-align: center;
+  background-color: #FF8A65;
 }
 
 #contact h2 {
   font-size: 2.5rem;
   margin-bottom: 20px;
-  color: #333;
+  color: white;
 }
 
 #contact p {
   font-size: 1.1rem;
   margin-bottom: 40px;
-  color: #666;
+  color: white;
 }
 
 /* Contact Form */
